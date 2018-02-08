@@ -26,218 +26,70 @@
             <p>Class 3</p>
         </div>
 
-        <div class="slide">
-            <h2>a little more CartoCSS</h2>
+        <div class="slide" style="background-image: url(img/assignment-eric.png);">
+            <a class="source" href="https://thenewschool.carto.com/u/ericbias/builder/c86c8702-ddf5-4099-bd60-d92e2f965f9b/embed?state=%7B%22map%22%3A%7B%22ne%22%3A%5B40.691181787748235%2C-74.13831710815431%5D%2C%22sw%22%3A%5B40.810821008436534%2C-73.82383346557619%5D%2C%22center%22%3A%5B40.75102830623015%2C-73.98107528686525%5D%2C%22zoom%22%3A13%7D%7D">Eric</a>
         </div>
 
-        <div class="slide">
-            <pre class="code"><code>#earthquakes {
-    marker-width: 3;
-    ...
-    [zoom &gt;= 10] {
-        marker-width: 8;
-    }
-}</code></pre>
+        <div class="slide" style="background-image: url(img/assignment-eric-code.png);">
+            <a class="source" href="https://thenewschool.carto.com/u/ericbias/builder/c86c8702-ddf5-4099-bd60-d92e2f965f9b/embed?state=%7B%22map%22%3A%7B%22ne%22%3A%5B40.691181787748235%2C-74.13831710815431%5D%2C%22sw%22%3A%5B40.810821008436534%2C-73.82383346557619%5D%2C%22center%22%3A%5B40.75102830623015%2C-73.98107528686525%5D%2C%22zoom%22%3A13%7D%7D">Eric</a>
         </div>
 
-        <div class="slide">
-            <pre class="code" style="font-size: 50px; line-height: 70px;"><code>#earthquakes {
-    marker-width: 3;
-    ...
-    [place = 'South of Panama'] {
-        marker-width: 8;
-    }
-}</code></pre>
+        <div class="slide" style="background-image: url(img/assignment-emily.png);">
+            <a class="source" href="https://thenewschool.carto.com/u/emsloss/builder/66aac529-ffc4-401b-94db-e57bfb37b779/embed?state=%7B%22map%22%3A%7B%22ne%22%3A%5B35.99106317570924%2C-79.0510940551758%5D%2C%22sw%22%3A%5B36.11874092636721%2C-78.73661041259767%5D%2C%22center%22%3A%5B36.054927942348186%2C-78.89385223388673%5D%2C%22zoom%22%3A13%7D%7D">Emily</a>
         </div>
 
-        <div class="slide intermission"></div>
-
-        <div class="slide">
-            <h2>combine conditions with <em>,</em> to set properties with <em>either</em> condition</h2>
+        <div class="slide" style="background-image: url(img/assignment-emily-code.png);">
+            <a class="source" href="https://thenewschool.carto.com/u/emsloss/builder/66aac529-ffc4-401b-94db-e57bfb37b779/embed?state=%7B%22map%22%3A%7B%22ne%22%3A%5B35.99106317570924%2C-79.0510940551758%5D%2C%22sw%22%3A%5B36.11874092636721%2C-78.73661041259767%5D%2C%22center%22%3A%5B36.054927942348186%2C-78.89385223388673%5D%2C%22zoom%22%3A13%7D%7D">Emily</a>
         </div>
 
-        <div class="slide">
-            <pre style="font-size: 50px; line-height: 70px;"><code>#earthquakes {
-    marker-width: 3;
-    ...
-    [mag &gt; 5.5],
-    [place = 'South of Panama'] {
-        marker-width: 15;
-    }
-}</code></pre>
+        <div class="slide" style="background-image: url(img/readings-compstat.png);">
+            <a class="source" href="https://compstat.nypdonline.org/2e5c3f4b-85c1-4635-83c6-22b27fe7c75c/view/89">source</a>
         </div>
 
-        <div class="slide" style="background-image: url(img/cartocss-conditions-or.png);">
+        <div class="slide" style="background-image: url(img/readings-million-dollar-blocks.png);">
+            <a class="source" href="http://c4sr.columbia.edu/projects/million-dollar-blocks">source</a>
         </div>
 
-        <div class="slide">
-            <h2>combine conditions <em>without</em> a <em>,</em> to set properties with <em>both</em> conditions</h2>
-        </div>
-
-        <div class="slide">
-            <pre style="font-size: 40px; line-height: 60px;"><code>#earthquakes {
-    marker-width: 3;
-    ...
-    [mag &gt; 4][place = 'South of Panama'] {
-        marker-width: 15;
-    }
-}</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre style="font-size: 40px; line-height: 60px;"><code>#earthquakes {
-    marker-width: 3;
-    ...
-    [mag &gt; 4][place = 'South of Panama'] {
-        marker-width: 15;
-    }
-}</code></pre>
-            <p>make markers where mag is greater than 4 <em>and</em> place = "South of Panama" larger</p>
-        </div>
-
-        <div class="slide" style="background-image: url(img/cartocss-conditions-and.png);">
-        </div>
-
-        <div class="slide">
-            <h2>matching text within an attribute</h2>
-        </div>
-
-        <div class="slide">
-            <pre><code>[place =~ ".*Africa.*"] {
-     marker-width: 15;
-}</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre><code>[place =~ ".*Africa.*"] {
-     marker-width: 15;
-}</code></pre>
-            <p>style features with "Africa" anywhere in the <code>place</code> field</p>
+        <div class="slide" style="background-image: url(img/readings-white-collar-crime-risk-zones.png);">
+            <a class="source" href="https://whitecollar.thenewinquiry.com">source</a>
         </div>
 
         <div class="slide intermission"></div>
 
         <div class="slide">
-            <pre style="font-size: 40px; line-height: 50px;"><code>#earthquakes {
-    marker-width: 5;
-    marker-fill: #ff307a;
-    marker-allow-overlap: true;
+            <h2>CartoCSS refresher</h2>
+        </div>
 
-    [zoom &gt;= 4] {
-        marker-width: 10;
-    }
-    [zoom &gt;= 8] {
-        marker-width: 15;
-    }
-    [zoom &gt;= 12] {
-        marker-width: 20;
-    }
+        <div class="slide">
+            <h2>CartoCSS looks like CSS, but they're two different things</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>#layer {
+  marker-width: 3;
+
+  [zoom &gt;= 10] {
+    marker-width: 8;
+  }
+}</code></pre>
+        </div>
+
+
+        <div class="slide">
+            <pre><code>#layer {
+  marker-width: 3;
+
+  [bright_ti4 &gt;= 350] {
+    marker-width: 8;
+  }
 }</code></pre>
         </div>
 
         <div class="slide">
-            <h2>what if I want to change marker-width?</h2>
-        </div>
-
-        <div class="slide">
-            <pre style="font-size: 40px; line-height: 50px;"><code>#earthquakes {
-    marker-width: 6;
-    marker-fill: #ff307a;
-    marker-allow-overlap: true;
-
-    [zoom &gt;= 4] {
-        marker-width: 12;
-    }
-    [zoom &gt;= 8] {
-        marker-width: 18;
-    }
-    [zoom &gt;= 12] {
-        marker-width: 24;
-    }
-}</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>there's a better way!</h2>
-        </div>
-
-        <div class="slide">
-            <h2>variables</h2>
-        </div>
-
-        <div class="slide">
-            <pre style="font-size: 40px; line-height: 50px;"><code><em>@width: 6;</em>
-#earthquakes {
-    marker-width: <em>@width</em>;
-    marker-fill: #ff307a;
-    marker-allow-overlap: true;
-
-    [zoom &gt;= 4] {
-        marker-width: 12;
-    }
-    [zoom &gt;= 8] {
-        marker-width: 18;
-    }
-    [zoom &gt;= 12] {
-        marker-width: 24;
-    }
-}</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre style="font-size: 40px; line-height: 50px;"><code><em>@width: 6;</em>
-#earthquakes {
-    marker-width: <em>@width</em>;
-    marker-fill: #ff307a;
-    marker-allow-overlap: true;
-
-    [zoom &gt;= 4] {
-        marker-width: <em>@width * 2</em>;
-    }
-    [zoom &gt;= 8] {
-        marker-width: <em>@width * 3</em>;
-    }
-    [zoom &gt;= 12] {
-        marker-width: <em>@width * 4</em>;
-    }
-}</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>then I can change all the widths at once</h2>
-        </div>
-
-        <div class="slide">
-            <pre style="font-size: 40px; line-height: 50px;"><code><em>@width: 8;</em>
-#earthquakes {
-    marker-width: @width;
-    marker-fill: #ff307a;
-    marker-allow-overlap: true;
-
-    [zoom &gt;= 4] {
-        marker-width: @width * 2;
-    }
-    [zoom &gt;= 8] {
-        marker-width: @width * 3;
-    }
-    [zoom &gt;= 12] {
-        marker-width: @width * 4;
-    }
-}</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>it works with colors, too</h2>
-        </div>
-
-        <div class="slide">
-            <pre><code><em>@quakecolor: #ff307a;</em>
-#earthquakes {
-    marker-width: @width;
-    marker-fill: <em>@quakecolor</em>;
-    marker-line-color: <em>@quakecolor</em>;
-    marker-line-opacity: 0.2;
-    marker-allow-overlap: true;
+            <pre style="font-size: 50px; line-height: 60px;"><code>#layer[zoom < 10] {
+  marker-fill: blue;
+  marker-allow-overlap: true;
+  marker-width: 10;
 }</code></pre>
         </div>
 
@@ -265,9 +117,6 @@
 
         <div class="slide" style="background-image: url(img/analysis-4.png);">
             <h2>convex hull</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/analysis-5.png);">
         </div>
 
         <div class="slide">
@@ -350,7 +199,7 @@
 
         <div class="slide">
             <pre><code>SELECT *
-FROM education</code></pre>
+FROM collisions</code></pre>
         </div>
 
         <div class="slide">
@@ -363,14 +212,14 @@ FROM education</code></pre>
 
         <div class="slide">
             <p>if you only want a few columns, list them. for example:</p>
-            <pre><code>SELECT students, teachers
-FROM education</code></pre>
+            <pre><code>SELECT borough, number_of_persons_injured
+FROM collisions</code></pre>
         </div>
 
         <div class="slide">
             <pre><code>SELECT *
-FROM education
-WHERE students &gt; 100</code></pre>
+FROM collisions
+WHERE number_of_persons_injured &gt; 2</code></pre>
         </div>
 
         <div class="slide">
@@ -394,20 +243,20 @@ WHERE students &gt; 100</code></pre>
         <div class="slide">
             <p>for example:</p>
             <pre><code>SELECT *
-FROM education
-WHERE students &gt; 100
-    AND students &lt; 200</code></pre>
+FROM collisions
+WHERE number_of_persons_injured &gt; 1
+  AND borough = 'STATEN ISLAND'</code></pre>
         </div>
 
         <div class="slide">
-            <h2>how would do you get just the education features  with <code>students</code> between 100 and 150?</h2>
+            <h2>how would do you get just the collisions features in Queens or the Bronx?</h2>
         </div>
 
         <div class="slide">
             <pre><code>SELECT *
-FROM education
-WHERE students &gt; 100
-    AND students &lt; 150</code></pre>
+FROM collisions
+WHERE borough = 'QUEENS'
+  OR borough = 'BRONX'</code></pre>
         </div>
 
         <div class="slide">
@@ -417,13 +266,9 @@ WHERE students &gt; 100
         <div class="slide">
             <p>for example:</p>
             <pre><code>SELECT *
-FROM education
-WHERE NOT (students &gt; 100
-  OR op_type = 'religious')</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>how would you get just the education features with <code>students</code> not between 100 and 150?</h2>
+FROM collisions
+WHERE NOT (borough = 'QUEENS'
+  OR borough = 'BRONX')</code></pre>
         </div>
 
         <div class="slide">
@@ -451,9 +296,13 @@ WHERE NOT (students &gt; 100
         <div class="slide">
             <p>count matching rows:</p>
             <pre><code>SELECT COUNT(*)
-FROM education
-WHERE students &gt; 100
-  AND op_type = 'religious'</code></pre>
+FROM collisions</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>SELECT COUNT(*)
+FROM collisions
+WHERE zip_code = 10001</code></pre>
         </div>
 
         <div class="slide">
@@ -464,7 +313,7 @@ WHERE students &gt; 100
         </div>
 
         <div class="slide">
-            <h2>how would you get the number of education features with <code>students</code> between 100 and 150?</h2>
+            <h2>how would you get the number of collisions features in Queens?</h2>
         </div>
 
         <div class="slide">
@@ -481,7 +330,13 @@ WHERE students &gt; 100
         </div>
 
         <div class="slide">
-            <h2>these <em>will</em> destroy data, so have a backup or test it with a table you don't need</h2>
+            <pre><code>UPDATE collisions
+SET description = 'deadly'
+WHERE number_of_persons_killed &gt; 0</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>these <em>will</em> change or destroy data, so have a backup or test it with a table you don't need</h2>
         </div>
 
         <div class="slide">
@@ -493,18 +348,33 @@ WHERE students &gt; 100
         </div>
 
         <div class="slide">
+            <h2>first, create a new column on your table</h2>
+            <h2>for example, <em>description</em></h2>
+        </div>
+
+        <div class="slide">
             <h2>then put the desired data in that column, based on some condition</h2>
         </div>
 
         <div class="slide">
-            <pre><code>UPDATE education
-SET size = 'large'
-WHERE students &gt; 2500</code></pre>
+            <pre><code>UPDATE collisions
+SET description = 'deadly'
+WHERE number_of_persons_killed &gt; 0</code></pre>
         </div>
 
         <div class="slide">
-            <pre><code>DELETE FROM education
+            <pre><code>UPDATE collisions
+SET description = 'could have been worse'
+WHERE number_of_persons_killed = 0</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>DELETE FROM collisions
 WHERE ...</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 3</a></h2>
         </div>
 
         <div class="slide">
@@ -521,6 +391,12 @@ WHERE ...</code></pre>
         <div class="slide" style="background-image: url(img/airbnb-2.png);">
         </div>
 
+        <div class="slide" style="background-image: url(img/airbnb-2.png);">
+            <pre style="margin-top: 75px; background: rgba(255, 255, 255, 0.9); padding: 10px; display: inline-block;"><code>SELECT *
+FROM rooms
+WHERE id = '4789513'</code></pre>
+        </div>
+
         <div class="slide intermission"></div>
 
         <div class="slide" style="background-image: url(img/postgis-logo.png);">
@@ -528,17 +404,16 @@ WHERE ...</code></pre>
 
         <div class="slide">
             <pre><code>SELECT *, ST_area(the_geom)
-FROM kiberaboundary</code></pre>
+FROM boundary</code></pre>
         </div>
 
         <div class="slide">
             <pre style="font-size: 35px; line-height: 45px;"><code>SELECT *,
-  ST_area(ST_transform(the_geom_webmercator, 21036))
-FROM kiberaboundary</code></pre>
+  ST_area(ST_transform(the_geom_webmercator, 2263))
+FROM boundary</code></pre>
         </div>
 
         <div class="slide" style="background-image: url(img/other-projections.png);">
-            <a class="source" href="http://www.geopoliticalmapping.com/arctic-maps/">source</a>
         </div>
 
         <div class="slide">
@@ -546,10 +421,6 @@ FROM kiberaboundary</code></pre>
   ST_Transform(the_geom, 3573)
     AS the_geom_webmercator
 FROM my_table</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2><a href="inclass.html" target="_blank">in-class exercise, part 3</a></h2>
         </div>
 
     </body>

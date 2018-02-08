@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>In-class Exercises | Advanced GIS</title>
-        <link href='http://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
         <link href="../css/pages.css" rel="stylesheet" type="text/css" />
         <link href="../css/inclass.css" rel="stylesheet" />
     </head>
@@ -15,12 +15,11 @@
             <section>
                 <h2>Part 1: Analysis</h2>
                 <ol>
-                    <li>Download <a href="data/week3data.zip">today's data</a>. It's from <a href="http://mapkibera.org/download/">Map Kibera</a>.</li>
-                    <li>Add both shapefiles to your CARTO account.</li>
-                    <li>Create a map with both shapefiles.</li>
-                    <li>Add a buffer to the education layer using the <strong>Create areas of influence</strong> analysis. For this exercise, let's create buffers of 150 meters.</li>
-                    <li>Count the number of watsan features in each buffer by adding another analysis to the education layer: <strong>Intersect second layer</strong>. Choose the watsan layer as the <strong>intersect layer</strong>.</li>
-                    <li>The number of watsan features should be in a new column, <code>count_vals</code>. Style the school buffers using this column.</li>
+                    <li>Download <a href="data/week3data.zip">today's data</a>. It contains a CSV of vehicle collisions recorded by the NYPD in January 2018. You can get the data on <a href="https://data.cityofnewyork.us/Public-Safety/NYPD-Motor-Vehicle-Collisions/h9gi-nx95/data">NYC Open Data</a>.</li>
+                    <li>Unzip <strong>week3data.zip</strong> and add the CSV to your CARTO account.</li>
+                    <li>Create a map with the collisions.</li>
+                    <li>Filter the data using the <strong>Filter by column value</strong> analysis. For example, show only collisions where <strong>on_street_name</strong> is <strong>Broadway</strong>.</li>
+                    <li>Add a buffer to the layer using the <strong>Create areas of influence</strong> analysis. For this exercise, let's create buffers of 150 meters.</li>
                 </ol>
             </section>
 
@@ -28,17 +27,15 @@
                 <h2>Part 2: Selecting data with SQL</h2>
                 <ol>
                     <li>Open the <a href="materials/sql-cheatsheet.pdf" target="_blank">SQL cheatsheet</a>.</li>
-                    <li>Open the education dataset&mdash;not as a map.</li>
+                    <li>Open the collisions dataset&mdash;not as a map.</li>
                     <li>Execute a few SQL queries using the patterns outlined in the cheatsheet:
                         <ul>
-                            <li>Count the schools</li>
-                            <li>Select schools that are <code>religious</code></li>
-                            <li>Select schools with an email address</li>
-                            <li>Select schools with a count of students</li>
-                            <li>Average the count of students (you will have to convert it to a number field first)</li>
-                            <li>Find the minimum number of students</li>
+                            <li>Count the collisions</li>
+                            <li>Select collisions that happened in Staten Island</li>
+                            <li>Select collisions with no latitude</li>
+                            <li>Find the total number of people injured by collisions</li>
                         </ul>
-                        Keep track of the queries you run in a text file.
+                        It's good practice to keep track of the queries you run in a text file.
                     </li>
                     <li>Which of the above work in the map <strong>preview</strong>, too?</li>
                 </ol>
@@ -47,15 +44,17 @@
             <section>
                 <h2>Part 3: Updating data with SQL</h2>
                 <ol>
-                    <li>Open the education dataset.</li>
-                    <li>Ensure the <code>students</code> and <code>teachers</code> columns are numbers field.</li>
-                    <li>Add a new column, name it <code>st_ratio</code>, and make it a number field.</li>
-                    <li>Calculate the student-teacher ratio and put it in the new column:
+                    <li>Open the collisions dataset.</li>
+                    <li>Add a new column, name it <code>involved_taxi</code>, and make it a string field.</li>
+                    <li>Put 'yes' in our new column if any of the vehicle columns contains 'TAXI':
                         <pre>
-UPDATE education
-SET st_ratio = students / teachers
+UPDATE collisions
+SET involved_taxi = 'yes'
+WHERE vehicle_type_code_1 = 'TAXI' OR vehicle_type_code_2 = 'TAXI' OR vehicle_type_code_3 = 'TAXI' 
+  OR vehicle_type_code_4 = 'TAXI' OR vehicle_type_code_5 = 'TAXI'</pre>
                     </li>
-                    <li>Create a map styling the education features by <code>st_ratio</code>.</li>
+                    <li>Do the inverse of the previous step&mdash;set the new column to 'no' if none of the vehicle columns contains 'TAXI'.</li>
+                    <li>Create a map with the dataset and include the new column in the popups.</li>
                 </ol>
             </section>
 
