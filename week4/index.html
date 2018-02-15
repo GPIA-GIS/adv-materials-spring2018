@@ -2,10 +2,10 @@
 <html>
     <head>
         <title>Class 4 | Advanced GIS</title>
-        <meta charset="utf-8">
+        <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
-        <link href='http://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
 
         <link href="../css/pig.css" rel="stylesheet" type="text/css" />
         <link href="../css/base.css" rel="stylesheet" />
@@ -26,354 +26,240 @@
             <p>Class 4</p>
         </div>
 
-        <div class="slide intermission"></div>
-
-        <div class="slide" style="background-image: url(img/analysis-1.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/analysis-2.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/analysis-2.png);">
-            <h2>geocoding</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/analysis-3.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/analysis-3.png);">
-            <h2>buffer</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/analysis-4.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/analysis-4.png);">
-            <h2>convex hull</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/analysis-5.png);">
-        </div>
-
-        <div class="slide intermission"></div>
-
         <div class="slide">
-            <h2>SQL</h2>
+            <h2>making base maps</h2>
         </div>
 
         <div class="slide">
-            <p>What does this do?</p>
-            <pre><code>SELECT *
-FROM education</code></pre>
+            <h2>most webmaps use raster tiles</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles.gif);">
+            <a href="http://maptimeboston.github.io/web-maps-101/#17" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles.gif);">
+            <h2>raster tiles are 256 x 256 pixel images</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles.gif);">
+            <h2>they use the same <em>zoom</em>, <em>x</em>, and <em>y</em> values, so they're interchangeable</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom0.png);">
+            <h2>each tile is just an image on the internet</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom0.png);">
+            <p style="background: white;">http://a.tile.stamen.com/toner/0/0/0.png</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/openwhatevermap.png);">
+            <a href="http://www.openwhatevermap.xyz/" class="source">openwhatevermap.xyz</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom-2.jpg);">
+            <a href="http://maptimeboston.github.io/web-maps-101/#17" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom-3.jpg);">
+            <a href="http://maptimeboston.github.io/web-maps-101/#17" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom-3.jpg);">
+            <h2>as you zoom in, the number of tiles quadruples</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom-3.jpg);">
+            <h2>if you made tiles for all of zoom 18 you'd have nearly 69 <em>billion</em> images</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-loading.gif);">
+            <h2>that's why browsers only load what you need to see</h2>
+            <a href="http://maptimeboston.github.io/web-maps-101/#17" class="source">source</a>
         </div>
 
         <div class="slide">
-            <p>And what does this do?</p>
-            <pre><code>SELECT *
-FROM education
-WHERE students &gt; 100</code></pre>
+            <h2>webmaps are moving toward <em>vector</em> tiles</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom-3.jpg);">
+            <h2>with vector tiles, all the map data is split into the same exact grid pattern</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/vector-simplify.gif);">
+            <h2>and the data is filtered and simplified for the zoom level you're at</h2>
         </div>
 
         <div class="slide">
-            <img style="width: 50%;" src="img/arc-query-builder.png" />
+            <h2>the data is sent to the browser for each tile, then the <em>browser</em> styles it</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cake.jpg);">
+            <h2>if your base map is a cake</h2>
+            <a class="source" href="https://smittenkitchen.com/2012/09/roasted-apple-spice-sheet-cake/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cake-slice.jpg);">
+            <h2>you might think of raster tiles as slices of a big cake</h2>
+            <a class="source" href="https://smittenkitchen.com/2012/09/roasted-apple-spice-sheet-cake/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cake-slice.jpg);">
+            <h2>a server somewhere turns the data into images</h2>
+            <a class="source" href="https://smittenkitchen.com/2012/09/roasted-apple-spice-sheet-cake/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cake-ingredients.jpg);">
+            <h2>a vector tile is the ingredients (data) for a single slice of cake</h2>
+            <a class="source" href="https://smittenkitchen.com/2012/09/roasted-apple-spice-sheet-cake/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cake-ingredients.jpg);">
+            <h2>the browser turns the data into an image</h2>
+            <a class="source" href="https://smittenkitchen.com/2012/09/roasted-apple-spice-sheet-cake/">source</a>
         </div>
 
         <div class="slide">
-            <img style="width: 50%; margin-top: 10%;" src="img/arc-query-builder-zoom.png" />
+            <h2>this opens up possibilities:</h2>
         </div>
 
-        <div class="slide" style="background-image: url(img/assignment-jakob.png);">
-            <a class="source">Jakob</a>
+        <div class="slide" style="background-image: url(img/vector-dynamic-style.gif);">
+            <h2>1. dynamic styles</h2>
         </div>
 
-        <div class="slide" style="background-image: url(img/assignment-joy.png);">
-            <a class="source">Joy</a>
+        <div class="slide" style="background-image: url(img/vector-fractional-zoom.gif);">
+            <h2>2. fractional zoom levels (eg 3.5 rather than 3 or 4)</h2>
         </div>
 
-        <div class="slide">
-            <h2>SQL shows up everywhere online</h2>
+        <div class="slide" style="background-image: url(img/vector-perspective.gif);">
+            <h2>3. dynamic perspective</h2>
         </div>
 
-        <div class="slide" style="background-image: url(img/airbnb.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/airbnb-2.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/airbnb-2.png);">
-            <pre style="margin-top:50px; background: rgba(255,255,255,0.8); display: inline-block; padding: 15px;"><code>SELECT *
-FROM rooms
-WHERE id=4789513</code></pre>
-        </div>
-
-        <div class="slide intermission"></div>
-
-        <div class="slide">
-            <h2 style="text-decoration: line-through;">1. pulling data out of the database</h2>
-            <h2>2. changing the data in the database</h2>
-        </div>
-
-        <div class="slide">
-            <h2>you can also use SQL to quickly <code>UPDATE</code> or <code>DELETE</code> the data in your table</h2>
-        </div>
-
-        <div class="slide">
-            <h2>these <em>will</em> destroy data, so have a backup or test it with a table you don't need</h2>
-        </div>
-
-        <div class="slide">
-            <h2>this is one way to customize the way data is displayed in your pop-ups</h2>
-        </div>
-
-        <div class="slide">
-            <h2>first, create a new column on your table</h2>
-        </div>
-
-        <div class="slide">
-            <h2>then put the desired data in that column, based on some condition</h2>
-        </div>
-
-        <div class="slide">
-            <pre><code>UPDATE education
-SET st_ratio = students / teachers</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre><code>DELETE FROM education
-WHERE ...</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>SQL shows up everywhere online</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/other-projections.png);">
-            <a class="source" href="http://www.geopoliticalmapping.com/arctic-maps/">source</a>
-        </div>
-
-        <div class="slide">
-            <pre><code>SELECT cartodb_id,
-  ST_Transform(the_geom, 3573)
-    AS the_geom_webmercator
-FROM my_table</code></pre>
+        <div class="slide" style="background-image: url(img/vector-projections.gif);">
+            <h2>4. more projections</h2>
+            <a href="https://mapzen.com/blog/escape-from-mercator/" class="source">source</a>
         </div>
 
         <div class="slide intermission"></div>
 
         <div class="slide">
-            <h2>let's talk about project proposals</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/final-project-schedule.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/project-claire.png);">
-            <a class="source" href="http://churc.github.io/house-ACO/">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/project-silvia.png);">
-            <a class="source" href="http://silviaxavier.github.io/canners.html">source</a>
+            <h2>so how do you <em>make</em> base maps?</h2>
         </div>
 
         <div class="slide">
-            <p>projects must:</p>
-            <ul style="list-style: disc outside; padding-left: 50px;">
-                <li>be online</li>
-                <li>require a reasonable amount of effort</li>
-                <li>use techniques covered in class</li>
-            </ul>
+            <h2>it depends!</h2>
         </div>
 
         <div class="slide">
-            <p>projects might:</p>
-            <ul style="list-style: disc outside; padding-left: 50px;">
-                <li>contain multiple maps</li>
-                <li>contain multiple, connected pages</li>
-                <li>mix scales (eg world-wide + city-wide)</li>
-                <li>mix types of data (eg quantitative + qualitative)</li>
-            </ul>
+            <h2>in theory you can make tiles on your own</h2>
+        </div>
+
+        <div class="slide">
+            <h2>many mapmakers turn to Mapbox</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio.png);">
+            <a href="https://www.mapbox.com/mapbox-studio/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio.png);">
+            <h2>Mapbox provides modified OpenStreetMap data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio.png);">
+            <h2>Mapbox provides modified OpenStreetMap data</h2>
+            <h2>raster and vector tiles, but emphasis on vector</h2>
         </div>
 
         <div class="slide intermission"></div>
 
         <div class="slide">
-            <h2>map kibera</h2>
+            <h2>creating styles</h2>
         </div>
 
-        <div class="slide" style="background-image: url(img/kibera-satellite.png);">
-            <a class="source" href="http://tools.geofabrik.de/mc/#15/-1.3135/36.7922&num=4&mt0=mapnik&mt1=google-map&mt2=bing-map&mt3=mapnik-german">
-                source
-            </a>
+        <div class="slide" style="background-image: url(img/mapbox-studio-home.png);">
         </div>
 
-        <div class="slide" style="background-image: url(img/kibera-google.png);">
-            <a class="source" href="http://tools.geofabrik.de/mc/#15/-1.3135/36.7922&num=4&mt0=mapnik&mt1=google-map&mt2=bing-map&mt3=mapnik-german">
-                source
-            </a>
+        <div class="slide" style="background-image: url(img/mapbox-studio-feature-layer.png);">
         </div>
 
-        <div class="slide" style="background-image: url(img/kibera-osm.png);">
-            <a href="http://tools.geofabrik.de/mc/#15/-1.3135/36.7922&num=4&mt0=mapnik&mt1=google-map&mt2=bing-map&mt3=mapnik-german">
-                source
-            </a>
+        <div class="slide" style="background-image: url(img/mapbox-studio-color.png);">
         </div>
 
-        <div class="slide" style="background-image: url(img/groundtruth.png);">
-            <a class="source" href="http://groundtruth.in/">Groundtruth Initiative</a>
+        <div class="slide" style="background-image: url(img/mapbox-studio-color-zoom.png);">
         </div>
 
-        <div class="slide">
-            <h2>1. trace the roads using aerial imagery</h2>
+        <div class="slide" style="background-image: url(img/mapbox-studio-field.png);">
         </div>
 
-        <div class="slide" style="background-image: url(img/osm-id.gif);">
+        <div class="slide" style="background-image: url(img/mapbox-studio-filter-data.png);">
         </div>
 
-        <div class="slide" style="background-image: url(img/kibera-outline.jpg);">
-            <a class="source" href="http://www.mapkibera.org/blog/2010/01/12/some-notes-on-map-kibera-mapping/">Map Kibera Blog</a>
+        <div class="slide" style="background-image: url(img/mapbox-studio-publish.png);">
         </div>
 
         <div class="slide">
-            <h2>2. use GPS to collect point data and correct roads</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/kibera-gps.jpg);">
-            <a class="source" href="http://www.mapkibera.org/blog/2011/08/16/help-map-kibera-turn-maps-into-action/">Map Kibera Blog</a>
-        </div>
-
-        <div class="slide">
-            <p>"In the intense density of Kibera, selecting which features are 'important' is a judgment call and a matter of interest."</p>
-            <a class="source" href="http://www.mapkibera.org/blog/2010/01/12/some-notes-on-map-kibera-mapping/">Map Kibera Blog</a>
-        </div>
-
-        <div class="slide">
-            <h2>3. decide on and focus on themes</h2>
-            <p><a href="http://mapkibera.org/wiki/index.php?title=Tagging/Education">education</a></p>
-            <p><a href="http://mapkibera.org/wiki/index.php?title=Tagging/Health">health</a></p>
-            <p><a href="http://mapkibera.org/wiki/index.php?title=Tagging/Security">security</a></p>
-            <p><a href="http://mapkibera.org/wiki/index.php?title=Tagging/Watsan">water and sanitation</a></p>
-        </div>
-
-        <div class="slide" style="background-image: url(img/kibera-walking-papers.jpg);">
-            <a class="source" href="https://www.flickr.com/photos/junipermarie/4133315811/">Map Kibera Walking Papers</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/fieldpapers-print-atlas.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/fieldpapers-page.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/fieldpapers-uploaded.png);">
-        </div>
-
-        <div class="slide">
-            <h2>(week one)</h2>
-            <h2>~1997 - today</h2>
-            <ol style="list-style: decimal outside; padding-left: 50px;">
-                <li>GPS</li>
-                <li>the web changed</li>
-                <li>more data became available</li>
-                <li>FOSS became mainstream</li>
-            <ol>
-        </div>
-
-        <div class="slide" style="background-image: url(img/seeing-like-a-slum-1.png);">
-            <a class="source" href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2045556">Seeing Like a Slum: Towards Open, Deliberative Development</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/mikel-stop-google.png);">
-            <a class="source" href="http://brainoff.com/weblog/2011/04/11/1635">We Need to Stop Google’s Exploitation of Open Communities</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/seeing-like-a-slum-2.png);">
-            <a class="source" href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2045556">Seeing Like a Slum: Towards Open, Deliberative Development</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/map-kibera-wall.jpg);">
-            <a class="source" href="http://www.mapkibera.org/blog/2013/04/10/security-map-draws-attention-in-kibera/">Map Kibera Blog</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/voice-of-kibera.png);">
-            <a class="source" href="http://voiceofkibera.org/">Voice of Kibera</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/voice-of-kibera-detail.png);">
-            <a class="source" href="http://voiceofkibera.org/reports/view/1315">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/open-schools-kenya.png);">
-            <a class="source" href="http://kiberanewsnetwork.org/">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/open-schools-kenya-detail.png);">
-            <a class="source" href="http://kiberanewsnetwork.org/">source</a>
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 1</a></h2>
         </div>
 
         <div class="slide intermission"></div>
 
         <div class="slide">
-            <h2>HTML</h2>
-            <p>defines the <strong>structure</strong> of a page, loads other bits</p>
+            <h2>using Mapbox tiles in Carto</h2>
         </div>
 
-        <div class="slide" style="background-image: url(img/html.png);">
-            <h2>HTML</h2>
+        <div class="slide" style="background-image: url(img/cake-slice.jpg);">
         </div>
 
-        <div class="slide">
-            <h2>CSS</h2>
-            <p>adds <strong>style</strong> to parts of a page</p>
+        <div class="slide" style="background-image: url(img/cake-slice.jpg);">
+            <h2>as of now, Carto can only use raster tiles</h2>
         </div>
 
-        <div class="slide" style="background-image: url(img/css.png);">
-            <h2>CSS</h2>
+        <div class="slide" style="background-image: url(img/mapbox-share.png);">
         </div>
 
-        <div class="slide">
-            <h2>JavaScript</h2>
-            <p>makes web pages <strong>dynamic</strong> (eg AJAX)</p>
+        <div class="slide" style="background-image: url(img/mapbox-carto-url.png);">
         </div>
 
-        <div class="slide" style="background-image: url(img/ajax_grounded.gif);">
-            <h2>JavaScript</h2>
+        <div class="slide" style="background-image: url(img/carto-basemap.png);">
         </div>
 
-        <div class="slide" style="background-image: url(img/ajax_foursquare.gif);">
-            <h2>JavaScript</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/js.png);">
-            <h2>JavaScript</h2>
+        <div class="slide" style="background-image: url(img/carto-mapbox-basemap.png);">
         </div>
 
         <div class="slide">
-            <p>your browser loads the <strong>HTML</strong>, which tells it which <strong>CSS</strong> and <strong>JavaScript</strong> files to get (if any)</p>
-        </div>
-
-        <div class="slide" style="background-image: url(img/devtools_loading.gif);">
-        </div>
-
-        <div class="slide">
-            <h2>if you want something to be online, it has to be on a server somewhere</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/imgur.png);">
-            <h2>imgur.com</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/neocities.png);">
-            <h2>neocities.org</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/github-pages.png);">
-            <h2 style="margin-top: 350px;">pages.github.com</h2>
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 2</a></h2>
         </div>
 
         <div class="slide intermission"></div>
 
+        <div class="slide" style="background-image: url(img/mapbox-tileset-link.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-tileset-link.png);">
+            <h2>adding your own data to a Mapbox style</h2>
+        </div>
+
         <div class="slide">
-            <h2>adding images to pop-ups</h2>
+            <p>1. Upload data (such as a zipped shapefile)</p>
+            <p>2. Add the tileset to your style</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-add-tileset.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-upload-tileset.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-add-layer.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-data-add.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 3</a></h2>
         </div>
 
     </body>
