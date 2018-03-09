@@ -1,7 +1,9 @@
 <html>
     <head>
         <title>In-class Exercise | Advanced GIS</title>
-        <link href="../style.css" rel="stylesheet" />
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
     </head>
     <body>
         <main>
@@ -11,67 +13,55 @@
             </header>
 
             <section>
-                <h2>Part 1: Embed a map with JavaScript</h2>
+                <h2>Part 1: Change some settings on a map loaded in JavaScript</h2>
                 <ol>
-                    <li>Download <a href="inclass-embed.html">this HTML</a> and open it in a code editor (such as Brackets).</li>
-                    <li>Open the file in your browser.</li>
-                    <li>Open a published Carto map you will embed on the page. Find the <strong>mapid</strong> by looking at the url when you have the map open. It should look something like
-                        <pre><code>https://thenewschool.carto.com/u/brelsfoeagain/builder/79edb122-0374-11e7-b189-0e233c30368f/</code></pre>
-                        and the mapid is the numbers and letters after <code>/builder/</code>, in this case:
-                        <pre><code>https://thenewschool.carto.com/u/brelsfoeagain/builder/<strong>79edb122-0374-11e7-b189-0e233c30368f</strong>/</code></pre>
+                    <li>Remix <a href="https://glitch.com/edit/#!/dandelion-milk">this Glitch</a> in your account.</li>
+                    <li>The map is currently showing the whole world at once but the data is mostly on the eastern US coast. Let's recenter the map.</li>
+                    <li>In the <strong>script.js</strong> file on <strong>line 4</strong> there should be a line like this one: <pre><code>var map = L.map('map').setView([30, 0], 3);</code></pre>
+                        On this line:
+                        <ol>
+                            <li><code>30</code> is the center latitude,</li>
+                            <li><code>0</code> is the center longitude, and</li>
+                            <li><code>3</code> is the zoom level.</li>
+                        </ol>
                     </li>
-                    <li>
-                        Replace the url for the map to one of your own maps. Currently this looks like
-                        <pre><code>cartodb.createVis('map', 'https://thenewschool.carto.com/u/brelsfoeagain/api/v2/viz/79edb122-0374-11e7-b189-0e233c30368f/viz.json');</code></pre>
-                        and you need to replace two parts of the url: the username and the mapid (which you found in step 3).
-                        <pre><code>cartodb.createVis('map', 'https://thenewschool.carto.com/u/<strong>{username}</strong>/api/v2/viz/<strong>{mapid}</strong>/viz.json');</code></pre>
+                    <li>Try editing the zoom and see what changes on the map.</li>
+                    <li>Try editing the latitude and longitude. If you want to be more precise, try using <a href="http://bboxfinder.com/">bboxfinder</a> to find a helpful center. (Keep an eye on the order of the latitude and longitude though!)</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Change the basemap</h2>
+                <ol>
+                    <li>Continuing with your code from the previous part, let's change the basemap. On <strong>line 7</strong> there is a url like this:
+                        <pre><code>https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png</code></pre>
+                    </li>
+                    <li>Find the <strong>Leaflet</strong> url for one of your Mapbox maps:
+                        <ol>
+                            <li>log into Mapbox,</li>
+                            <li>go to your styles,</li>
+                            <li>click <strong>Share, develop & use</strong> in the menu next to the style,</li>
+                            <li>scroll down to <strong>Develop with this style</strong>,</li>
+                            <li>click the <strong>Leaflet</strong> button,</li>
+                            <li>copy the url, and finally</li>
+                            <li>paste the url in the code on line 7</li>
+                        </ol>
+                    </li>
+                    <li>When you're done line 7 should look something like this:
+                        <pre><code>L.tileLayer('https://api.mapbox.com/styles/v1/ebrelsford/cjdnmgzmv00dc2rnql1pzcsk2/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ...', {</code></pre>
+                        and the basemap on your map should be the Mapbox style
                     </li>
                 </ol>
             </section>
 
             <section>
-                <h2>Part 2: Change the options on a map</h2>
-                <p>Continuing with your page from Part 1, change the initial center and zoom on your map using options in <a href="https://carto.com/docs/carto-engine/carto-js/api-methods#arguments">the documentation</a>.</p>
-                <p>You currently have something like:
-                    <pre><code>&lt;script&gt;
-    $(document).ready(function () {
-        cartodb.createVis('map', your_visualization_url);
-    });
-&lt;/script&gt;</code></pre>
-                </p>
-                <p>Add options like this:
-                    <pre><code>&lt;script&gt;
-    $(document).ready(function () {
-        cartodb.createVis('map', your_visualization_url<strong>, {
-            center_lat: 50,
-            center_lon: -74,
-        }</strong>);
-    });
-&lt;/script&gt;</code></pre>
-                </p>
-                <p>(I'm only showing you how to do the center here, you should use <a href="https://carto.com/docs/carto-engine/carto-js/api-methods#arguments">the documentation</a> to figure out how to do the zoom.)</p>
-            </section>
-
-            <section>
-                <h2>Part 3: Filter a map layer with JavaScript</h2>
+                <h2>Part 3: Load your own data</h2>
                 <ol>
-                    <li>Download <a href="inclass-button.html">this HTML</a> and open it in a code editor (such as Brackets).</li>
-                    <li>Open the file in your browser.</li>
-                    <li>Right now the "public water" and "reset" buttons change the SQL of the layer when you click on them. Take a look at the HTML and JavaScript that we use for the "public water" button:
-                        <pre><code>&lt;button class="public-water"&gt;public water&lt;/button&gt;</code></pre>
-                        and in the JavaScript:
-                        <pre><code>$('.public-water').click(function () {
-    watsanLayer.setSQL("SELECT * FROM watsan WHERE watsan = 'water_public'");
-});</code></pre>
-                    </li>
-                    <li>We want to add another button to filter the layer to just urban agriculture points. After the "public water" button add another button, this time for urban agriculture:
-                        <pre><code>&lt;button class="urban-agriculture"&gt;urban agriculture&lt;/button&gt;</code></pre>
-                    </li>
-                    <li>Reload the page. You should have a button that says "urban agriculture" but doesn't do anything when you click it. You need to add some JavaScript to make that part work. Add this in the JavaScript:
-                        <pre><code>$('.urban-agriculture').click(function () {
-    watsanLayer.setSQL("SELECT * FROM watsan WHERE watsan = 'urban_agriculture'");
-});</code></pre>
-                    </li>
+                    <li>Continuing with your code from the previous part, let's load your data on the map.</li>
+                    <li>In the code, we need to tell Carto which username we are using. On <strong>line 14</strong> you should see my username (<code>brelsfoeagain</code>). Keeping the quotation marks, replace my username with your username.</li>
+                    <li>Next pick some data to load. Login to your Carto account and look at your datasets. It doesn't matter which one you pick for this exercise as long as it is valid. If the dataset is <strong>private</strong>, change the privacy settings so it is either <strong>public</strong> or <strong>Only accessible with link</strong>.</li>
+                    <li>Copy the exact name of the dataset and on <strong>line 18</strong> replace my dataset name (<code>hms_efh_2009tiger_shark</code>) with yours. Again, the quotation marks need to remain.</li>
+                    <li>Style your data as you wish. You could write some CartoCSS from scratch or copy and paste from a previous map you made. Either way, replace my CartoCSS on <strong>lines 22 - 29</strong> with your CartoCSS.</li>
                 </ol>
             </section>
 

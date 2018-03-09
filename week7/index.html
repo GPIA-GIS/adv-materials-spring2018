@@ -5,7 +5,7 @@
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
-        <link href="http://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans" rel="stylesheet" type="text/css">
 
         <link href="../css/pig.css" rel="stylesheet" type="text/css" />
         <link href="../css/base.css" rel="stylesheet" />
@@ -26,33 +26,59 @@
             <p>Class 7</p>
         </div>
 
-        <div class="slide">
-            <h2>next week:</h2>
-            <ul>
-                <li>project proposals are due</li>
-            </ul>
+        <div class="slide" style="background-image: url(img/assignment-greg.png);">
+            <a href="https://watchlist-south-sudan.glitch.me/" class="source">Greg</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/assignment-cecilia.png);">
+            <a href="https://nyc-fms.glitch.me/" class="source">Cecilia</a>
         </div>
 
         <div class="slide">
-            <h2>next week:</h2>
-            <ul>
-                <li>project proposals are due</li>
-                <li>guest speaker</li>
-            </ul>
+            <pre><code>a {
+    color: blue;
+    font-size: 20px;
+}</code></pre>
         </div>
 
         <div class="slide">
-            <h2>next week:</h2>
-            <ul>
-                <li>project proposals are due</li>
-                <li>guest speaker</li>
-                <li>work session</li>
-            </ul>
+            <pre><code>&lt;p <span class="highlighted">style="font-size: 100px;"</span>&gt;
+    a special paragraph
+&lt;/p&gt;</code></pre>
         </div>
 
         <div class="slide">
-            <h2>3/23: no class</h2>
+            <h2>workflow</h2>
         </div>
+
+        <div class="slide">
+            <h2>workflow</h2>
+            <p>(1) try out a change in developer tools, then copy and paste it to your file</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/developer_tools.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/developer_tools_css.png);">
+        </div>
+
+        <div class="slide">
+            <h2>workflow</h2>
+            <p>(2) comment things out rather than delete them</p>
+        </div>
+
+        <div class="slide">
+            <h2>workflow</h2>
+            <p>(2) comment things out rather than delete them:</p>
+            <pre style="font-size: 45px; line-height: 55px;"><code>a {
+    /* Trying out a new color */
+    <span class="highlighted">/*color: blue;*/</span>
+    color: rgb(88, 18, 209);
+    ...
+}</code></pre>
+        </div>
+
+        <div class="slide intermission"></div>
 
         <div class="slide">
             <h1>JavaScript</h1>
@@ -60,10 +86,6 @@
 
         <div class="slide" style="background-image: url(img/refugee-map.png);">
             <a href="http://www.macleans.ca/news/canada/true-north-refugees-where-25000-syrians-have-settled-in-canada/" class="source">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/cartodb-js-areas.gif);">
-            <a href="http://cartodb.github.io/cartodb.js/examples/layer_selector.html" class="source">area selector</a>
         </div>
 
         <div class="slide" style="background-image: url(img/urban-reviewer.gif);">
@@ -74,8 +96,8 @@
             <a href="http://www.latimes.com/projects/la-me-freeway-pollution/" class="source">source</a>
         </div>
 
-        <div class="slide" style="background-image: url(img/carto-js.png);">
-            <a href="inclass-select.html" class="source">source</a>
+        <div class="slide" style="background-image: url(img/carto-dropdown.png);">
+            <a href="https://glitch.com/edit/#!/carto-dropdown" class="source">source</a>
         </div>
 
         <div class="slide intermission"></div>
@@ -95,8 +117,42 @@ allowfullscreen webkitallowfullscreen mozallowfullscreen
 oallowfullscreen msallowfullscreen&gt;&lt;/iframe&gt;</code>
         </div>
 
-        <div class="slide" style="background-image: url(img/carto-js.png);">
-            <a href="inclass-embed.html" class="source">source</a>
+        <div class="slide" style="background-image: url(img/carto-embed.png);">
+            <a href="https://peppermint-pump.glitch.me/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-single-layer.png);">
+            <a href="https://dandelion-milk.glitch.me/" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>take a few minutes to compare an <a href="https://peppermint-pump.glitch.me/">embedded map</a> to one <a href="https://dandelion-milk.glitch.me/">using JavaScript</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>what are the similarities and differences between the two?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>now take a few minutes to compare the code for an <a href="https://glitch.com/edit/#!/peppermint-pump">embedded map</a> to one <a href="https://glitch.com/edit/#!/dandelion-milk">using JavaScript</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>look at the JavaScript file for the <a href="https://glitch.com/edit/#!/dandelion-milk">map using JavaScript</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>what do you recognize?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>let's change some settings on a JavaScript map</h2>
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 1</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>let's change the basemap on a JavaScript map</h2>
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 2</a></h2>
         </div>
 
         <div class="slide">
@@ -104,7 +160,7 @@ oallowfullscreen msallowfullscreen&gt;&lt;/iframe&gt;</code>
         </div>
 
         <div class="slide">
-            <h2>1: load Carto library</h2>
+            <h2>1: load Carto and Leaflet</h2>
         </div>
 
         <div class="slide">
@@ -120,18 +176,16 @@ oallowfullscreen msallowfullscreen&gt;&lt;/iframe&gt;</code>
         </div>
 
         <div class="slide">
-            <pre style="font-size: 20px; line-height: 30px;"><code>&lt;link rel="stylesheet" href="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/themes/css/cartodb.css" /&gt;
-&lt;script src="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/cartodb.js"&gt;&lt;/script&gt;</code></pre>
+            <pre style="font-size: 20px; line-height: 30px;"><code>&lt;link rel="stylesheet" href=https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"/&gt;
+&lt;script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"&gt;&lt;/script&gt;
+&lt;script src="https://cartodb-libs.global.ssl.fastly.net/carto.js/v4.0.0-beta/carto.min.js"&gt;&lt;/script&gt;</code></pre>
         </div>
 
         <div class="slide">
-            <pre style="font-size: 20px; line-height: 30px;"><code>&lt;link rel="stylesheet" href="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/themes/css/cartodb.css" /&gt;
-&lt;script src="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/cartodb.js"&gt;&lt;/script&gt;</code></pre>
+            <pre style="font-size: 20px; line-height: 30px;"><code>&lt;link rel="stylesheet" href=https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"/&gt;
+&lt;script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"&gt;&lt;/script&gt;
+&lt;script src="https://cartodb-libs.global.ssl.fastly.net/carto.js/v4.0.0-beta/carto.min.js"&gt;&lt;/script&gt;</code></pre>
             <h2>(you'll copy and paste this)</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-js-getting-started.png);">
-            <a href="https://carto.com/docs/carto-engine/carto-js/getting-started" class="source">source</a>
         </div>
 
         <div class="slide">
@@ -145,156 +199,12 @@ oallowfullscreen msallowfullscreen&gt;&lt;/iframe&gt;</code>
         </div>
 
         <div class="slide">
-            <h2>3: tell Carto to create the map</h2>
-        </div>
-
-        <div class="slide">
-            <pre style="font-size: 20px; line-height: 30px;"><code>&lt;script&gt;
-    $(document).ready(function () {
-        cartodb.createVis('map', 'https://thenewschool.carto.com/u/brelsfoeagain/api/v2/viz/0f95ca3a-02d9-11e7-b9b0-0ecd1babdde5/viz.json');
-    });
-&lt;/script&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre><code>$(document).ready(function () {
-    // Do something
-});</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre><code>$(document).ready(function () {
-    // Do something
-});</code></pre>
-            <h2>wait until the page loads to do something</h2>
-        </div>
-
-        <div class="slide">
-            <pre style="font-size: 20px; line-height: 30px;"><code>cartodb.createVis('map', 'https://thenewschool.carto.com/u/brelsfoeagain/api/v2/viz/0f95ca3a-02d9-11e7-b9b0-0ecd1babdde5/viz.json');</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre style="font-size: 20px; line-height: 30px;"><code>cartodb.createVis('map', 'https://thenewschool.carto.com/u/brelsfoeagain/api/v2/viz/0f95ca3a-02d9-11e7-b9b0-0ecd1babdde5/viz.json');</code></pre>
-            <h2>cartodb, please run the <code>createVis</code> function for me</h2>
-        </div>
-
-        <div class="slide">
-            <h2>functions</h2>
-        </div>
-
-        <div class="slide">
-            <pre><code>alert('hiiiii');</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre><code>console.log('shhhh');</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre><code>'maps'.toUpperCase();</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>function</h2>
-            <pre style="font-size: 40px; line-height: 50px;"><code>&lt;script&gt;
-    $(document).ready(function () {
-        <span class="highlighted">cartodb.createVis</span>(your_map_id,
-                          your_visualization_url,
-                          your_options);
-    });
-&lt;/script&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>your map's id, url, options are the <em>parameters</em></h2>
-        </div>
-
-        <div class="slide">
-            <h2>parameters</h2>
-            <pre style="font-size: 40px; line-height: 50px;"><code>&lt;script&gt;
-    $(document).ready(function () {
-        cartodb.createVis(<span class="highlighted">your_map_id,
-                          your_visualization_url,
-                          your_options</span>);
-    });
-&lt;/script&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>parameters affect the way a function works</h2>
-        </div>
-
-        <div class="slide">
-            <pre style="font-size: 20px; line-height: 30px;"><code>&lt;script&gt;
-    $(document).ready(function () {
-        cartodb.createVis('map', 'https://thenewschool.carto.com/u/brelsfoeagain/api/v2/viz/0f95ca3a-02d9-11e7-b9b0-0ecd1babdde5/viz.json');
-    });
-&lt;/script&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre style="font-size: 35px; line-height: 45px;"><code>&lt;script&gt;
-    $(document).ready(function () {
-        cartodb.createVis('map', your_visualization_url);
-    });
-&lt;/script&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre style="font-size: 35px; line-height: 45px;"><code>&lt;script&gt;
-    $(document).ready(function () {
-        cartodb.createVis('map', your_visualization_url);
-    });
-&lt;/script&gt;</code></pre>
-            <h2>what is <code>your_visualization_url</code>?</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/cartodb-api-code.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/cartodb-api-code.png);">
-            <h2>well this <em>used</em> to work</h2>
-        </div>
-
-        <div class="slide">
-            <h2>for now we have to create this url on our own</h2>
-        </div>
-
-        <div class="slide">
-            <pre style="font-size: 40px; line-height: 50px;"><code>https://thenewschool.carto.com/u/{username}/api/v2/viz/{mapid}/viz.json</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre style="font-size: 40px; line-height: 50px;"><code>https://thenewschool.carto.com/u/{username}/api/v2/viz/{mapid}/viz.json</code></pre>
-            <h2>replace <code>{username}</code> and <code>{mapid}</code></h2>
-        </div>
-
-        <div class="slide">
-            <h2>okay what is <code>{mapid}</code>?</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-map-id.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-map-id.png);">
-            <h2>everything after <code>/builder/</code> in the url when you're editing the map</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-map-id.png);">
-            <h2>in this case, <code>79edb122-0374-11e7-b189-0e233c30368f</code></h2>
-        </div>
-
-        <div class="slide">
-            <ol>
-                <li>load Carto library</li>
-                <li>make a place for the map to go</li>
-                <li>tell Carto to create the map</li>
-            </ol>
+            <h2>3: create the map and tell Carto to put data on it</h2>
         </div>
 
         <div class="slide">
             <h2>let's javascript a map!</h2>
-            <h2><a href="inclass.html" target="_blank">in-class exercise, part 1</a></h2>
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 3</a></h2>
         </div>
 
         <div class="slide intermission"></div>
@@ -318,214 +228,36 @@ oallowfullscreen msallowfullscreen&gt;&lt;/iframe&gt;</code>
             <h2>more customization</h2>
         </div>
 
-        <div class="slide">
-            <h2>eg, remove the logo</h2>
+        <div class="slide" style="background-image: url(img/carto-custom-legend.png);">
+            <a href="https://glitch.com/edit/#!/carto-custom-legend?path=README.md:3:53" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-popup-youtube.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-dropdown.png);">
+            <a href="https://glitch.com/edit/#!/carto-dropdown" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/urban-reviewer.gif);">
+            <a href="http://www.urbanreviewer.org/" class="source">source</a>
         </div>
 
         <div class="slide">
-            <pre style="font-size: 30px; line-height: 40px;"><code>&lt;script&gt;
-    $(document).ready(function () {
-        cartodb.createVis('map', your_visualization_url, {
-            cartodb_logo: false
-        });
-    });
-&lt;/script&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre style="font-size: 30px; line-height: 40px;"><code>&lt;script&gt;
-    $(document).ready(function () {
-        cartodb.createVis('map', your_visualization_url<span class="highlighted">, {
-            cartodb_logo: false
-        }</span>);
-    });
-&lt;/script&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>try it:</h2>
-            <p>remove the logo from your map</p>
-            <pre style="font-size: 30px; line-height: 40px;"><code>&lt;script&gt;
-    $(document).ready(function () {
-        cartodb.createVis('map', your_visualization_url<span class="highlighted">, {
-            cartodb_logo: false
-        }</span>);
-    });
-&lt;/script&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>objects</h2>
-        </div>
-
-        <div class="slide">
-            <pre><code>{
-    cartodb_logo: false
-}</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre><code>{
-    cartodb_logo: false,
-    zoom: 5
-}</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>there are more options</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-api-docs.png);">
-            <a href="https://carto.com/docs/carto-engine/carto-js/api-methods" class="source">Carto.js documentation</a>
-        </div>
-
-        <div class="slide">
-            <h2>let's change more options</h2>
-            <h2><a href="inclass.html" target="_blank">in-class exercise, part 2</a></h2>
-        </div>
-
-        <div class="slide intermission"></div>
-
-        <div class="slide">
-            <h2>jQuery</h2>
-        </div>
-
-        <div class="slide">
-            <h2>jQuery</h2>
-            <p>makes it easier to do some common things in JavaScript</p>
-        </div>
-
-        <div class="slide">
-            <h2>anything starting with <code>$</code> is talking to jQuery</h2>
-        </div>
-
-        <div class="slide">
-            <h2>(it's not standard JavaScript)</h2>
-        </div>
-
-        <div class="slide">
-            <h2><code>$('#map')</code></h2>
-        </div>
-
-        <div class="slide">
-            <h2><code>$('#map').hide()</code></h2>
-        </div>
-
-        <div class="slide">
-            <pre><code>$('#map').animate({ opacity: 0 })</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>try this on your map in the console:</h2>
-            <pre><code>$('#map').animate({ width: 0 })</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre><code>$('.public-water').click(function () {
-    console.log("click");
-});</code></pre>
-        </div>
-
-        <div class="slide" style="background-image: url(img/deliveries.jpg);">
-        </div>
-
-        <div class="slide">
-            <h2>pick the <code>div</code> with <code>class</code> "public-water"</h2>
-            <pre><code><span class="highlighted">$('.public-water')</span>.click(function () {
-    console.log("click");
-});</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>when it's clicked</h2>
-            <pre><code>$('.public-water')<span class="highlighted">.click</span>(function () {
-    console.log("click");
-});</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>run this code</h2>
-            <pre><code>$('.public-water').click<span class="highlighted">(function () {
-    console.log("click");
-});</span></code></pre>
-        </div>
-
-        <div class="slide intermission"></div>
-
-        <div class="slide">
-            <h2>back to Carto</h2>
-        </div>
-
-        <div class="slide">
-            <h2>let's make a button that changes what's on the map</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/cartodb-custom-layer-switcher.png);">
-            <h2>like this one</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-button.png);">
-            <h2>or this one</h2>
-            <a href="inclass-button.html" class="source">source</a>
-        </div>
-
-        <div class="slide">
-            <h2>four steps:</h2>
             <ol>
-                <li>create a button</li>
-                <li>get the map layer</li>
-                <li>listen for a click on the button</li>
-                <li>change the layer's SQL</li>
+                <li>load Carto library</li>
+                <li>make a place for the map to go</li>
+                <li>tell Carto to create the map</li>
             </ol>
         </div>
 
-        <div class="slide">
-            <h2>look at <a href="inclass-button.html">the example</a></h2>
-        </div>
-
-        <div class="slide">
-            <h2>1. create a button</h2>
-            <pre><code>&lt;button class="public-water"&gt;public water&lt;/button&gt;</code></pre>
-        </div>
-
-        <div class="slide" style="background-image: url(img/public-water-button.png);">
-        </div>
-
-        <div class="slide">
-            <h2>2. get the map layer</h2>
-            <pre style="font-size: 50px; line-height: 60px;"><code>
-cartodb.createVis(...)
-.done(function (vis, layers) {
-    watsanLayer = layers[1].getSubLayer(0);     
-});</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>3. listen for a click on the button</h2>
-            <pre style="font-size: 50px; line-height: 60px;"><code>$('.public-water').click(function () {
-    ...
-});</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>4. change the layer's SQL</h2>
-            <pre style="font-size: 25px; line-height: 35px;"><code>$('.public-water').click(function () {
-    watsanLayer.setSQL("SELECT * FROM watsan WHERE watsan = 'water_public'");
-});</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>let's work with some buttons</h2>
-            <h2><a href="inclass.html" target="_blank">in-class exercise, part 3</a></h2>
-        </div>
-
         <div class="slide intermission"></div>
 
         <div class="slide" style="background-image: url(img/frustration.gif);">
         </div>
 
         <div class="slide" style="background-image: url(img/frustration.gif);">
-            <h2>this doesn't always go smoothly</h2>
+            <h2>this isn't always easy</h2>
         </div>
 
         <div class="slide">
@@ -548,6 +280,42 @@ cartodb.createVis(...)
             <a href="http://eloquentjavascript.net/" class="source">Eloquent JavaScript</a>
         </div>
 
+        <div class="slide" style="background-image: url(img/lynda-javascript.png);">
+            <a href="https://www.lynda.com/JavaScript-tutorials/JavaScript-Essential-Training/574716-2.html" class="source">lynda JavaScript Essential Training</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/javascripting.png);">
+            <a href="https://glitch.com/edit/#!/javascripting?path=README.md:1:0" class="source">javascripting</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>fun facts</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/java-vs-javascript.jpg);">
+            <a href="https://softtechmethodology.wordpress.com/2015/05/26/java-and-javascripts-two-different-programming-languages-for-developers/" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>JavaScript has almost nothing to do with Java</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/netscape.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/andreessen-diagram-3.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/andreessen-diagram.png);">
+        </div>
+
+        <div class="slide">
+            <h2>JavaScript was initially designed in 10 days in 1995</h2>
+            <a href="https://en.wikipedia.org/wiki/JavaScript" class="source">source</a>
+        </div>
+
         <div class="slide intermission"></div>
 
         <div class="slide">
@@ -555,11 +323,7 @@ cartodb.createVis(...)
         </div>
 
         <div class="slide">
-            <pre><code>var sql = 'SELECT * FROM watsan';</code></pre>
-        </div>
-
-        <div class="slide" style="background-image: url(img/bucket.png); background-size: 50%;">
-            <a href="http://cs-blog.khanacademy.org/2013/09/teaching-variables-analogies-and.html" class="source">khan academy</a>
+            <h2>variables hold on to things so you can use them later</h2>
         </div>
 
         <div class="slide">
@@ -574,129 +338,56 @@ cartodb.createVis(...)
 
         <div class="slide">
             <h2>variables can also be strings (text)</h2>
-            <pre><code>var sql = 'SELECT * FROM watsan';</code></pre>
+            <pre><code>var greeting = 'Hello world';</code></pre>
         </div>
 
         <div class="slide">
             <h2>and you can add strings together</h2>
-            <pre style="font-size: 35px; line-height: 45px;"><code>var type = 'urban_agriculture';
-var sql = "SELECT * FROM watsan WHERE watsan = '" + type + "'";</code></pre>
+            <pre style="font-size: 35px; line-height: 45px;"><code>var name = 'Randall';
+var greeting = 'Hello, ' + name;</code></pre>
         </div>
 
         <div class="slide">
-            <h2>try it:</h2>
-            <p>copy <a href="http://jsbin.com/hasumo/edit?html,output">jsbin.com/hasumo/edit</a> into Brackets and select a different watsan</p>
-        </div>
-
-        <div class="slide intermission"></div>
-
-        <div class="slide">
-            <h2>you can do this with any other kind of input</h2>
+            <h2>variables can also be other things like maps</h2>
         </div>
 
         <div class="slide">
-            <ol>
-                <li>Add the input to the page</li>
-                <li>Listen for the input to change</li>
-                <li>Update your data layer's SQL</li>
-            </ol>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-select.png);">
-            <h2>let's do this with a dropdown</h2>
-            <a class="source" href="inclass-filter.html">full example</a>
+            <h2>variables can also be other things like maps</h2>
+            <pre><code>var map = L.map('map').setView([30, 0], 3);</code></pre>
         </div>
 
         <div class="slide">
-            <h2>1. Add a dropdown</h2>
+            <h2>functions</h2>
         </div>
 
         <div class="slide">
-            <pre><code>&lt;select class="type-picker"&gt;
-    &lt;option value="all"&gt;All types&lt;/option&gt;
-    &lt;option value="bathroom"&gt;bathroom&lt;/option&gt;
-    &lt;option value="other"&gt;other&lt;/option&gt;
-&lt;/select&gt;</code></pre>
+            <pre><code>alert('NO');</code></pre>
         </div>
 
         <div class="slide">
-            <h2>2. Listen for it to change</h2>
+            <pre><code>console.log('The code got here');</code></pre>
         </div>
 
         <div class="slide">
-            <pre><code>$('.type-picker').change(function () {
-});</code></pre>
+            <pre><code>Math.max(2, 25);</code></pre>
         </div>
 
         <div class="slide">
-            <h2>3. Update the SQL</h2>
+            <pre style="font-size: 40px; line-height: 50px;"><code>var source = new carto.source.Dataset('hms_efh_2009tiger_shark');</code></pre>
         </div>
 
         <div class="slide">
-            <pre style="font-size: 30px; line-height: 40px;"><code>$('.type-picker').change(function () {
-  var type = $(this).val();
-  var sql;
-  if (type === 'all') {
-    sql = "SELECT * FROM watsan";
-  }
-  else {
-    sql = "SELECT * FROM watsan WHERE watsan = '" + type + "'";
-  }
-  dataLayer.setSQL(sql);
-});</code></pre>
+            <pre style="font-size: 40px; line-height: 50px;"><code>var source = new carto.source.Dataset(<span class="highlighted">'hms_efh_2009tiger_shark'</span>);</code></pre>
+            <h2>parameters</h2>
         </div>
 
         <div class="slide">
-            <pre><code>$('.type-picker').change(function () {
-  var type = $(this).val();
-});</code></pre>
+            <h2>parameters affect the way a function works</h2>
         </div>
 
         <div class="slide">
-            <pre><code>$('.type-picker').change(function () {
-  var type = $(this).val();
-});</code></pre>
-            <h2>get the selected type</h2>
-        </div>
-
-        <div class="slide">
-            <pre style="font-size: 30px; line-height: 40px;"><code>$('.type-picker').change(function () {
-  var type = $(this).val();
-  var sql;
-  if (type === 'all') {
-    sql = "SELECT * FROM watsan";
-  }
-});</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre style="font-size: 30px; line-height: 40px;"><code>$('.type-picker').change(function () {
-  var type = $(this).val();
-  var sql;
-  if (type === 'all') {
-    sql = "SELECT * FROM watsan";
-  }
-});</code></pre>
-            <h2>if "all types" selected, show all the data</h2>
-        </div>
-
-        <div class="slide">
-            <pre style="font-size: 30px; line-height: 40px;"><code>$('.type-picker').change(function () {
-  var type = $(this).val();
-  var sql;
-  if (type === 'all') {
-    sql = "SELECT * FROM watsan";
-  }
-  else {
-    sql = "SELECT * FROM watsan WHERE watsan = '" + type + "'";
-  }
-  dataLayer.setSQL(sql);
-});</code></pre>
-            <h2>else set an appropriate WHERE condition</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-select.png);">
-            <a class="source" href="inclass-filter.html">full example</a>
+            <pre style="font-size: 40px; line-height: 50px;"><code>var source = new carto.source.Dataset(<span class="highlighted">'hms_efh_2009tiger_shark'</span>);</code></pre>
+            <h2>when you change this text, the function gets a different dataset for you</h2>
         </div>
 
     </body>
