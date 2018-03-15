@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 8 | Advanced GIS</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href="https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans" rel="stylesheet" type="text/css">
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Advanced GIS, Lecture 8</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+        </div>
+
+        <div class="slide">
+            <h1>Advanced GIS</h1>
+            <p>Class 8</p>
+        </div>
+
+        <div class="slide">
+            <h2>no class next week (3/22)</h2>
+        </div>
+
+        <div class="slide">
+            <h2>there is an assignment due the next week (3/28)</h2>
+        </div>
+
+        <div class="slide">
+            <h2>there will be a guest speaker next class (3/29)</h2>
+        </div>
+
+        <div class="slide">
+            <h2>don't forget to work on projects (milestone on 4/18)</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/assignment-ana.png);">
+            <a href="https://understood-muse.glitch.me/" class="source">Ana</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/assignment-agnes.png);">
+            <a href="https://map-javas-homework.glitch.me/" class="source">Agnes</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/carto-single-layer.png);">
+            <a href="https://dandelion-milk.glitch.me/" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <ol>
+                <li>load Carto and Leaflet libraries</li>
+                <li>make a place for the map to go</li>
+                <li>tell Carto and Leaflet to create the map</li>
+            </ol>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet.png); background-size: 30%;">
+            <a class="source" href="http://leafletjs.com/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>a few things leaflet does:</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-tiles.gif);">
+            <h2>tiles</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-popups.gif);">
+            <h2>popups</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-zoom-and-pan.gif);">
+            <h2>zoom and pan</h2>
+        </div>
+
+        <div class="slide">
+            <h2>leaflet is used all over the place</h2>
+        </div>
+
+        <div class="slide">
+            <h2>leaflet is used all over the place</h2>
+            <img style="float: left; max-width: 25%;" src="img/carto.png" />
+        </div>
+
+        <div class="slide">
+            <h2>leaflet is used all over the place</h2>
+            <img style="float: left; max-width: 25%;" src="img/carto.png" />
+            <img style="float: left; max-width: 25%; background: white;" src="img/osm.svg" />
+        </div>
+
+        <div class="slide">
+            <h2>leaflet is used all over the place</h2>
+            <img style="float: left; max-width: 25%;" src="img/carto.png" />
+            <img style="float: left; max-width: 25%; background: white;" src="img/osm.svg" />
+            <p style="clear: both;">+ tons of other sites with maps on them</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/macleans.png);">
+          <a class="source" href="http://www.macleans.ca/news/canada/true-north-refugees-where-25000-syrians-have-settled-in-canada/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/macleans-attribution.png);">
+          <a class="source" href="http://www.macleans.ca/news/canada/true-north-refugees-where-25000-syrians-have-settled-in-canada/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/urban-reviewer.png);">
+          <a class="source" href="http://www.urbanreviewer.org/#map=12/40.7400/-73.9462">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/urban-reviewer-attribution.png);">
+          <a class="source" href="http://www.urbanreviewer.org/#map=12/40.7400/-73.9462">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>why's it so popular?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>you can use it for free forever</h2>
+        </div>
+
+        <div class="slide">
+            <h2>you can use it for free forever (as long as you have a place to host your site)</h2>
+        </div>
+
+        <div class="slide">
+            <h2>you can use it for free forever (as long as you have a place to host your site)</h2>
+        </div>
+
+        <div class="slide">
+            <h2>plugins</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-globe.png);">
+          <a class="source" href="http://chriswhong.github.io/leaflet-globeminimap/example/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-timeline.png);">
+          <a class="source" href="http://skeate.github.io/Leaflet.timeline/borders.html">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>functions</h2>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 40px; line-height: 50px;"><code>var source = new carto.source.Dataset('hms_efh_2009tiger_shark');</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>alert('NO');</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>console.log('The code got here');</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>Math.max(2, 25);</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 40px; line-height: 50px;"><code>var source = new carto.source.Dataset(<span class="highlighted">'hms_efh_2009tiger_shark'</span>);</code></pre>
+            <h2>parameters</h2>
+        </div>
+
+        <div class="slide">
+            <h2>parameters affect the way a function works</h2>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 40px; line-height: 50px;"><code>var source = new carto.source.Dataset(<span class="highlighted">'hms_efh_2009tiger_shark'</span>);</code></pre>
+            <h2>when you change this text, the function gets a different dataset for you</h2>
+        </div>
+
+        <div class="slide">
+            <h2>variables</h2>
+        </div>
+
+        <div class="slide">
+            <h2>variables hold on to things so you can use them later</h2>
+        </div>
+
+        <div class="slide">
+            <h2>variables can be numbers</h2>
+            <pre><code>var size = 5;</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>and you can do math on them</h2>
+            <pre><code>var size = 5 * 1000;</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>variables can also be strings (text)</h2>
+            <pre><code>var greeting = 'Hello world';</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>and you can add strings together</h2>
+            <pre style="font-size: 35px; line-height: 45px;"><code>var name = 'Randall';
+var greeting = 'Hello, ' + name;</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>variables can also be other things like maps</h2>
+        </div>
+
+        <div class="slide">
+            <h2>variables can also be other things like maps</h2>
+            <pre><code>var map = L.map('map').setView([30, 0], 3);</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>let's work with variables</h2>
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 1</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>variables can only have characters and numbers in their names</h2>
+        </div>
+
+        <div class="slide">
+            <h2>so don't to this:</h2>
+            <pre><code>var <span class="highlighted">shark map</span> = L.map('map').setView([30, 0], 3);</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>and don't to this:</h2>
+            <pre><code>var <span class="highlighted">shark-map</span> = L.map('map').setView([30, 0], 3);</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>do this instead:</h2>
+            <pre><code>var <span class="highlighted">sharkMap</span> = L.map('map').setView([30, 0], 3);</code></pre>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <pre style="font-size: 45px; line-height: 55px;"><code>var source = new carto.source.Dataset('hms_efh_2009tiger_shark');</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 45px; line-height: 55px;"><code>var source = new carto.source.Dataset('hms_efh_2009tiger_shark');</code></pre>
+            <h2>asks Carto for the dataset called 'hms_efh_2009tiger_shark'</h2>
+        </div>
+
+        <div class="slide">
+            <h2>if we want to change the SQL we need to load the data a little differently</h2>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 35px; line-height: 45px;"><code>var source = new carto.source.SQL('SELECT * FROM hms_efh_2009tiger_shark');</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 35px; line-height: 45px;"><code>var source = new carto.source.Dataset('hms_efh_2009tiger_shark');
+var source = new carto.source.SQL('SELECT * FROM hms_efh_2009tiger_shark');</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>then later in our code we can change the SQL</h2>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 25px; line-height: 35px;"><code>source.setQuery("SELECT * FROM hms_efh_2009tiger_shark WHERE life_stage = 'Juvenile'");</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 2</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>let's make a button that changes what's on the map</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-button.png);">
+            <h2>like this one</h2>
+            <a href="https://glitch.com/edit/#!/carto-buttons" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>three steps:</h2>
+            <ol>
+                <li>create a button</li>
+                <li>listen for a click on the button</li>
+                <li>change the layer's SQL</li>
+            </ol>
+        </div>
+
+        <div class="slide">
+            <h2>look at <a href="https://glitch.com/edit/#!/carto-buttons">the example</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>1. create a button</h2>
+            <pre><code>&lt;button class="juvenile-button"&gt;
+  just show Juvenile habitat
+&lt;/button&gt;</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/juvenile-button.png);">
+        </div>
+
+        <div class="slide">
+            <h2>2. listen for a click on the button</h2>
+            <pre style="font-size: 50px; line-height: 60px;"><code>juvenileButton.addEventListener('click', function (e) {
+  ...
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>3. change the layer's SQL</h2>
+            <pre style="font-size: 25px; line-height: 35px;"><code>juvenileButton.addEventListener('click', function (e) {
+  source.setQuery("SELECT * FROM hms_efh_2009tiger_shark WHERE life_stage = 'Juvenile'");
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>let's work with some buttons</h2>
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 3</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>you can use this pattern with any other kind of input</h2>
+        </div>
+
+        <div class="slide">
+            <ol>
+                <li>Add the HTML for the input to the page</li>
+                <li>Listen for the input to change</li>
+                <li>Update your data layer's SQL</li>
+            </ol>
+        </div>
+
+        <div class="slide">
+            <h2>events</h2>
+        </div>
+
+        <div class="slide">
+            <h2>most of the time, code happens sequentially</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/code-sequence-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/code-sequence-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/code-sequence-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/code-sequence-3.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/code-sequence-4.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/code-sequence-5.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/code-sequence-6.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/code-sequence-7.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/code-sequence-8.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/code-sequence-9.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/code-sequence-10.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/code-sequence-11.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/code-sequence-12.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/code-sequence-13.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/code-sequence-13.png);">
+          <h2>(you get the idea)</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/doorbell.jpg);">
+        </div>
+
+        <div class="slide">
+            <h2>events give the user a way to interrupt the program</h2>
+        </div>
+
+        <div class="slide">
+            <h2>pick the element with <code>class</code> "juvenile-button"</h2>
+            <pre style="font-size: 25px; line-height: 35px;"><code>var juvenileButton = document.querySelector('.juvenile-button');</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>when it's clicked</h2>
+            <pre style="font-size: 35px; line-height: 45px;"><code>juvenileButton.addEventListener('<span class="highlighted">click</span>', function (e) {
+    console.log("click");
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>run this code</h2>
+            <pre style="font-size: 35px; line-height: 45px;"><code>juvenileButton.addEventListener('click', function (e) {
+    <span class="highlighted">console.log("click");</span>
+});</code></pre>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>you <em>could</em> make a button for each type of feature</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>SELECT * 
+FROM hms_efh_2009tiger_shark 
+WHERE life_stage = 'Adult'
+
+SELECT * 
+FROM hms_efh_2009tiger_shark 
+WHERE life_stage = 'Neonate'</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>but that's kinda what dropdowns are for</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/llnyc.png);">
+            <a href="http://livinglotsnyc.org/">livinglotsnyc.org</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-dropdown.png); background-size: 50%;">
+        </div>
+
+        <div class="slide">
+            <h2>1. create a dropdown</h2>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 35px; line-height: 45px;"><code>&lt;select class="type-picker"&gt;
+  &lt;option value="all"&gt;Show all life stages&lt;/option&gt;
+  &lt;option value="Adult"&gt;Adult&lt;/option&gt;
+  &lt;option value="Juvenile"&gt;Juvenile&lt;/option&gt;
+  &lt;option value="Neonate"&gt;Neonate&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>2. listen for a change to the dropdown</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/doorbell.jpg);">
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 45px; line-height: 55px;"><code>layerPicker.addEventListener('change', function (e) {
+  ...
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>with a dropdown, you want to vary the SQL by the option selected</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>SELECT * 
+FROM hms_efh_2009tiger_shark 
+WHERE life_stage = 'Adult'
+
+SELECT * 
+FROM hms_efh_2009tiger_shark 
+WHERE life_stage = 'Neonate'</code></pre>
+        </div>
+
+        <div class="slide">
+            <code>var lifeStage = e.target.value;</code>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 30px; line-height: 40px;"><code>var lifeStage = e.target.value;
+var sql = "SELECT * FROM hms_efh_2009tiger_shark WHERE life_stage = " + lifeStage;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 30px; line-height: 40px;"><code>var lifeStage = e.target.value;
+var sql = "SELECT * FROM hms_efh_2009tiger_shark WHERE life_stage = '" + lifeStage + "'";</code></pre>
+        </div>
+
+    </body>
+</html>
