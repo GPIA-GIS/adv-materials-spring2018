@@ -1,52 +1,64 @@
 <html>
     <head>
         <title>In-class Exercise | Advanced GIS</title>
-        <link href="../style.css" rel="stylesheet" />
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
     </head>
     <body>
         <main>
             <header>
                 <a href="..">Advanced GIS</a>
-                <h1>In-class Exercise</h1>
+                <h1>In-class Exercise: JavaScript</h1>
             </header>
 
             <section>
-                <h2>Part 1: Creating styles with Mapbox</h2>
+                <h2>Part 1: Look at dropdowns</h2>
                 <ol>
-                    <li>Create an account with <a href="https://www.mapbox.com/">Mapbox</a> if you don't already have one.</li>
-                    <li>Go to <strong>Styles</strong> and create a new style. When picking a template style, start with <strong>Bright</strong>.</li>
-                    <li>Edit the style. Start with the parks layer (<strong>Landuse &gt; landuse_park</strong>) and change the color and stroke of parks. Zoom into a city to see your handywork.</li>
-                    <li>Make the colors of the parks layer change by zoom level.</li>
-                    <li>Next look at streets (<strong>Roads &gt; road_street</strong>). What is the relationship between <strong>road_street</strong> and <strong>road_street_casing</strong>?</li>
-                    <li>Next look at buildings (<strong>Buildings &gt; building</strong> and <strong>Buildings &gt; building_top</strong>. What does <strong>building_top</strong> do?</li>
+                    <li>Open <a href="https://bl.ocks.org/ebrelsford/796c27be2c610570d6b36d817ae80eda">this example</a> and copy the HTML (below the map) into a code editor (such as Brackets) and save it.</li>
+                    <li>Open the file in your browser.</li>
+                    <li>After the line
+                        <pre><code>var type = $('.type-picker').val();</code></pre>
+                        add the following line
+                        <pre><code>console.log(type);</code></pre>
+                    </li>
+                    <li>Reload the file in your browser, open developer tools, and pick various options in the dropdown. In the console are you should see the value of the dropdown being written out each time it changes.</li>
+                    <li>We're going to do the same thing with the SQL. Just <strong>before</strong> the line
+                        <pre><code>watsanLayer.setSQL(sql);</code></pre>
+                        Use <code>console.log()</code> to log out the value of the variable <code>sql</code>.
+                    </li>
                 </ol>
             </section>
 
             <section>
-                <h2>Part 2: Using Mapbox styles in Carto</h2>
+                <h2>Part 2: Arrays</h2>
                 <ol>
-                    <li>Publish your style from Part 1.</li>
-                    <li>Click the <strong>Preview, develop, and use</strong> button once you publish it.</li>
-                    <li>From this page you will need the <strong>Access token</strong> from the <strong>Develop with this style</strong> section and the <strong>Integration URL</strong> from under <strong>Use style in GIS apps &gt; CartoDB</strong>.</li>
-                    <li>Open a Carto map.</li>
-                    <li>Click on the base map (the bottom layer).</li>
-                    <li>Under <strong>Source</strong> scroll over to and click <strong>Mapbox</strong>, then click the <strong>+</strong> under <strong>Style</strong>.</li>
-                    <li>Copy your <strong>Access token</strong> into <strong>Enter your access token</strong> and <strong>Integration URL</strong> into <strong>Enter your map id/url</strong>.</li>
-                    <li>Click <strong>Add basemap</strong> and your basemap from Mapbox should appear.</li>
+                    <li>Open a new tab in your browser and open developer tools.</li>
+                    <li>Copy and paste this code into the console:
+                        <pre><code>var types = [
+    'urban_agriculture',
+    'biocentre',
+    'toilet_public'
+];</code></pre>
+                        and press <code>Enter</code>
+                    </li>
+                    <li>In the console, type <pre><code>types[0]</code></pre> and press <code>Enter</code>.</li>
+                    <li>You should see the first item in <code>types</code>.</li>
+                    <li>Do the same for the second and third items in <code>types</code>.</li>
                 </ol>
             </section>
 
             <section>
-                <h2>Part 3: Adding your own data to Carto</h2>
+                <h2>Part 3: Objects</h2>
                 <ol>
-                    <li>Select the rivers layer (<strong>Water &gt; waterway_river</strong>) and click the <strong>Select data</strong> tab.</li>
-                    <li>At what zoom level do  rivers become available?</li>
-                    <li>Let's say we want to make rivers visible when zoomed out more. <a href="http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_rivers_lake_centerlines.zip">Download Natural Earth's rivers data</a> and go to <strong>Tilesets</strong> in your Mapbox account and upload the zip file you downloaded. This will take a minute or two to upload and process.</li>
-                    <li>Go back to editing your style.</li>
-                    <li>Click <strong>New layer</strong>, then click the button next to <strong>Source</strong>. Find and click on the rivers under <strong>Unused sources</strong>. The name should start with <strong>ne_10m...</strong>.</li>
-                    <li>Set the <strong>Zoom</strong> max so that this layer does not overlap with the other rivers layer.</li>
-                    <li>Add a filter to only select features with scalerank less than 5&mdash;we only want to show the more prominent rivers.</li>
-                    <li>Click <strong>Create layer</strong> and style it.</li>
+                    <li>In the developer tools console, copy and paste this code:
+                        <pre><code>var coordinates = {
+    latitude: 41.56,
+    longitude: -73.29
+};</code></pre>
+                    </li>
+                    <li>Still in the console, type <pre><code>coordinates.latitude</code></pre> and press <code>Enter</code>.</li>
+                    <li>In a similar way, get the longitude from <code>coordinates</code>.</li>
                 </ol>
             </section>
 
