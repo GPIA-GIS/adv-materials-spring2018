@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <title>In-class Exercise | Advanced GIS</title>
+    <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+    <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+    <link href="../css/inclass.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+    <header>
+      <a href="..">Advanced GIS</a>
+      <h1>In-class Exercise: JavaScript</h1>
+    </header>
+
+    <section>
+      <h2>Part 1: SQL Spatial queries</h2>
+      <ol>
+        <li>Open your Carto account and a dataset you would like to filter by location.</li>
+        <li>Create a map with the dataset, and go to the SQL panel for the layer on the map.</li>
+        <li>Copy this SQL and adapt it to your layer: <pre><code>SELECT *
+FROM nypd_motor_vehicle_collisions
+WHERE ST_Within(ST_Transform(the_geom, 2263), ST_Buffer(ST_Transform(CDB_LatLng(40.732,-73.986), 2263),10000))</code></pre>
+          You will need to change:
+          <ul>
+            <li>the dataset name,</li>
+            <li>the projection: <strong>2263</strong> is the EPSG code for state plane long island, if you don't have a projection in mind use 3857 for now (web mercator)</li>
+            <li>the latitude and longitude if the dataset is not in NYC (use <a href="http://bboxfinder.com/">bboxfinder</a>)</li>
+            <li>the buffer distance (in this cae it is 10000 feet)</li>
+          </ul>
+        </li>
+        <li>Open <a href="https://glitch.com/edit/#!/carto-location-click">this glitch site</a> and remix it. Change the buffer distance that is used on click.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Part 2: Arrays</h2>
+      <ol>
+        <li>Open <a href="https://whispering-sofa.glitch.me/">this glitch site</a> in your browser and open developer tools.</li>
+        <li>Go to the console and type <code>lifeStages</code> and press <code>Enter</code></li>
+        <li>Also in the console, type <pre><code>lifeStages[0]</code></pre> and press <code>Enter</code> to see just the first element in the array.</li>
+		<li>Do the same for the second and third items in <code>lifeStages</code>.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Part 3: Objects</h2>
+      <ol>
+        <li>Open <a href="https://solid-leaf.glitch.me/">this glitch site</a> in your browser and open developer tools.</li>
+        <li>In the console, type <code>coordinates</code> and press <code>Enter</code>. You should see an object with two properties.</li>
+        <li>Still in the console, type <code>coordinates.latitude</code> and press <code>Enter</code>.</li>
+		<li>In a similar way, get the longitude from <code>coordinates</code>.</li>
+      </ol>
+    </section>
+
+    <footer>
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </footer>
+    </main>
+  </body>
+</html>
