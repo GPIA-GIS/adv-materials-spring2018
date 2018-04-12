@@ -26,13 +26,66 @@
             <p>Class 12</p>
         </div>
 
-        <div class="slide" style="background-image: url(img/projects-2016.png);">
-            <a class="source" href="http://gpia-gis.github.io/adv-spring2016/">source</a>
+        <div class="slide" style="background-image: url(img/projects-2017.png);">
+            <a class="source" href="http://gpia-gis.github.io/adv-spring2017/">source</a>
         </div>
 
         <div class="slide" style="background-image: url(img/project-documentation.png);">
-            <a class="source" href="https://docs.google.com/a/newschool.edu/forms/d/e/1FAIpQLSdMw1PmciQH2LPe_eCVxlEuUmTTU_70HyzrDCeo_8MHcD1R5Q/viewform">source</a>
+            <a class="source" href="https://docs.google.com/forms/d/e/1FAIpQLSepssMV6Rwu4yGy1vXufjRVfVPoTzswDLuJPMuCDTbq6X1Qhw/viewform">source</a>
         </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/carto-change-style.png);">
+            <a class="source" href="https://glitch.com/edit/#!/carto-change-style">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-change-style2.png);">
+            <a class="source" href="https://glitch.com/edit/#!/carto-change-style">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-change-style-code.png);">
+            <a class="source" href="https://glitch.com/edit/#!/carto-change-style">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-zoom-0.png);">
+            <a class="source" href="https://glitch.com/edit/#!/carto-zoom">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-zoom-1.png);">
+            <a class="source" href="https://glitch.com/edit/#!/carto-zoom">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-zoom-2.png);">
+            <a class="source" href="https://glitch.com/edit/#!/carto-zoom">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-draw.png);">
+            <a class="source" href="https://github.com/Leaflet/Leaflet.draw">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-draw.png);">
+            <a class="source" href="https://glitch.com/edit/#!/carto-draw">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-draw-1.png);">
+            <a class="source" href="https://glitch.com/edit/#!/carto-draw">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-draw-1.png);">
+            <pre style="background-color: rgba(255, 255, 255, 0.8);"><code>SELECT SUM(number_of_persons_injured)
+FROM nypd_motor_vehicle_collisions
+WHERE ST_Within(
+  ST_Transform(the_geom, 2263),
+  ST_Transform(
+    ST_SetSRID(ST_GeomFromGeoJSON(<strong>geoJSON</strong>), 4326),
+    2263
+  )
+)
+</code></pre>
+        </div>
+
+        <div class="slide intermission"></div>
 
         <div class="slide" style="background-image: url(img/trees-open-data.png);">
             <a class="source" href="https://data.cityofnewyork.us/Environment/2015-Street-Tree-Census-Tree-Data/pi5s-9p35">source</a>
@@ -94,57 +147,7 @@
             <a class="source" href="https://tree-map.nycgovparks.org/#treeinfo-597705">source</a>
         </div>
 
-        <div class="slide">
-            <h2>google forms &rarr; carto</h2>
-        </div>
-
-        <div class="slide">
-            <h2>you can embed a google form in your page and send the data to carto</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/google-form-embedded.png);">
-            <a href="formtest.html" class="source">source</a>
-        </div>
-
-        <div class="slide">
-            <h2>three steps:</h2>
-        </div>
-
-        <div class="slide">
-            <h2>1. create a google form</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/create-form.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/make-form.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/form-settings.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/set-spreadsheet.png);">
-        </div>
-
-        <div class="slide">
-            <h2>2. add the form to your page</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/get-embed-code-0.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/get-embed-code-1.png);">
-        </div>
-
-        <div class="slide">
-            <h2>3. add the responses to carto</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-google-connect.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-choose-spreadsheet.png);">
-        </div>
+        <div class="slide intermission"></div>
 
         <div class="slide">
             <h2>getting data out of openstreetmap</h2>
@@ -162,6 +165,20 @@
 
         <div class="slide" style="background-image: url(img/osm-draw.png);">
             <h2>"the free wiki map of the world"</h2>
+        </div>
+
+        <div class="slide">
+            <h2>getting data using overpass turbo</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/overpass-turbo-example.png);">
+            <a href="http://overpass-turbo.eu/s/opx" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/overpass-wizard.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/overpass-export.png);">
         </div>
 
         <div class="slide">
@@ -189,11 +206,18 @@
             </ul>
         </div>
 
-        <div class="slide" style="background-image: url(img/osm-shapes.png);">
+        <div class="slide">
+            <h2>shapes</h2>
+            <ul style="list-style: disc outside; padding-left: 50px;">
+                <li>nodes (points)</li>
+                <li>ways (lines)</li>
+                <li>closed ways (polygons)</li>
+                <li>relations (multilines and multipolygons)</li>
+            </ul>
         </div>
 
         <div class="slide">
-            <h2>so you have to add attributes to the features ("tag" them)</h2>
+            <h2>features are "tagged" with attributes</h2>
         </div>
 
         <div class="slide" style="background-image: url(img/qgis-attribute-table.png);">
@@ -202,7 +226,15 @@
         <div class="slide" style="background-image: url(img/osm-tags-union-square.png);">
         </div>
 
+        <div class="slide" style="background-image: url(img/osm-tags-union-square.png);">
+          <h2>leisure=park</h2>
+        </div>
+
         <div class="slide" style="background-image: url(img/osm-tags-bmt-broadway.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-tags-bmt-broadway.png);">
+          <h2>railway=subway</h2>
         </div>
 
         <div class="slide">
@@ -233,20 +265,6 @@
         </div>
 
         <div class="slide" style="background-image: url(img/tags-wiki-2.png);">
-        </div>
-
-        <div class="slide">
-            <h2>getting data using overpass turbo</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/overpass-turbo-example.png);">
-            <a href="http://overpass-turbo.eu/s/opx" class="source">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/overpass-wizard.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/overpass-export.png);">
         </div>
 
         <div class="slide">
